@@ -32,7 +32,7 @@
     }
 
     .highlight {
-      border: 2px solid rgb(195, 23, 23); /* Choose the color you prefer */
+      border: 2px solid rgb(212, 17, 46); /* Choose the color you prefer */
       padding: 5px;
       margin: 0;
       display: inline-block;
@@ -45,16 +45,16 @@
     <div class="service-content">
       <div class="service">
         <h1>Kovel Parts</h1>
-        <div class="card-content">
-          <div class="card" onclick="initiateCall('06661006044')">
+        <div class="card-content" >
+          <div class="card"  onclick="initiateCall('0661006044')">
             <img src="Png/adBlue.png" alt="Заправка AdBlue">
             <h2>Заправка AdBlue</h2>
-            <p onclick="openGoogleMaps('вулиця Варшавська, 24, Ковель, Волинська область, 45000')" class="highlight">Адреса: вулиця Варшавська, 24, Ковель, Волинська область, 45000</p>
+            <p class="highlight" onclick="openLink('https://maps.app.goo.gl/7kbhbSCBgVwnjviV7')">Переглянути на карті</p>
           </div>
-          <div class="card" onclick="openGoogleMaps('Магазин автозапчастин Ковель Партс')">
+          <div class="card"  onclick="initiateCall('0501006044')">
             <img src="Png/Magazine.png" alt="Склад-магазин">
             <h2>Склад-магазин</h2>
-            <p onclick="initiateCall('0501006044')" class="highlight">Адреса: вулиця Володимирська, 135, Ковель, Волинська область, 45000</p>
+            <p class="highlight"onclick="openLink('https://maps.app.goo.gl/EYbwhGbyh5FJg3HD6')">Переглянути на карті</p>
           </div>
           <div class="card">
             <img src="Png/logo.png" alt="Про нас">
@@ -64,12 +64,12 @@
           <div class="card" onclick="openLink('https://www.instagram.com/kovel_parts/')">
             <img src="Png/instagram.png" alt="Instagram">
             <h2>Instagram</h2>
-            <p>Kovel_parts</p>
+            <p >Kovel_parts</p>
           </div>
           <div class="card" onclick="openLink('https://www.facebook.com/profile.php?id=61554173969323')">
             <img src="Png/facebook.png" alt="Facebook">
             <h2>Facebook</h2>
-            <p>Заправка Adblue Ковель</p>
+            <p >Заправка Adblue Ковель</p>
           </div>
         </div>
       </div>
@@ -78,12 +78,7 @@
 
   <script>
     function openLink(url) {
-      window.location.href = url;
-    }
-
-    function openGoogleMaps(address) {
-      var mapsLink = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(address);
-      window.open(mapsLink, '_blank');
+      window.open(url, '_blank');
     }
 
     function initiateCall(phoneNumber) {
