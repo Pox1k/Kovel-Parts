@@ -73,8 +73,16 @@
   text-align: center;
   width: 100%;
   margin: 12px 0;
-  color: rgb(170, 16, 16); /* Змінено колір тексту "Переглянути карту" */
+  color: rgb(255, 255, 255); /* Змінено колір тексту "Переглянути карту" на чорний */
 }
+
+.card-content .card p.highlight {
+  border: 2px solid rgb(212, 17, 46);
+  padding: 5px;
+  margin: 0;
+  display: inline-block;
+}
+
 
 .card-content .card:hover i {
   color: rgb(178, 14, 14);
@@ -104,6 +112,14 @@
   margin: 0;
   display: inline-block;
 }
+.highlight2 {
+  color: black !important;
+  border: 2px solid rgb(212, 17, 46);
+  padding: 5px;
+  margin: 0;
+  display: inline-block;
+}
+
 
   </style>
 </head>
@@ -116,11 +132,11 @@
         <div class="card-content">
           <div class="card first-card" onclick="initiateCall('0661006044')">
             <h2></h2>
-            <p class="highlight" onclick="openLink('https://maps.app.goo.gl/7kbhbSCBgVwnjviV7')">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПереглянути карту</p>
+            <p class="highlight2" onclick="openLink('https://maps.app.goo.gl/7kbhbSCBgVwnjviV7')">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПереглянути карту</p>
           </div>
           <div class="card second-card" onclick="initiateCall('0501006044')">
             <h2></h2>
-            <p class="highlight" onclick="openLink('https://maps.app.goo.gl/EYbwhGbyh5FJg3HD6')">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПереглянути карту</p>
+            <p class="highlight2" onclick="openLink('https://maps.app.goo.gl/EYbwhGbyh5FJg3HD6')">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПереглянути карту</p>
           </div>
           <div class="card">
             <img src="Png/logo.png" alt="Про нас">
