@@ -86,7 +86,7 @@ h1::after {
 .card:hover {
   background-color: transparent;
   transform: translateY(-8px);
-  border-color: rgb(214, 27, 52); /* Ви маєте помилку в назві кольору */
+  border-color: rgb(197, 16, 40); /* Ви маєте помилку в назві кольору */
 }
 
 .card i {
