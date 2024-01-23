@@ -9,34 +9,102 @@
   <!-- link box icon -->
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   <style>
-    .card {
-      position: relative;
-      text-align: center;
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out;
+    /* Додайте це в розділ стилів */
+    .first-card {
+      background-image: url('Png/AdBlue.jpg');
     }
 
-    .card:hover {
-      transform: scale(1.05);
+    .second-card {
+      background-image: url('Png/snapedit_1706027749666.png');
     }
 
-    .card img {
-      width: 50px; /* Adjust the width as needed */
-      height: 50px; /* Adjust the height as needed */
-      display: block;
-      margin: 0 auto;
-    }
+   /* ... інші стилі ... */
 
-    .card h2 {
-      margin-top: 10px; /* Adjust the margin as needed */
-    }
+.card-content .card {
+  height: 330px;
+  width: 370px;
+  padding: 0;
+  margin: 15px;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
 
-    .highlight {
-      border: 2px solid rgb(212, 17, 46); /* Choose the color you prefer */
-      padding: 5px;
-      margin: 0;
-      display: inline-block;
-    }
+.first-card,
+.second-card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-content .card::after {
+  content: "";
+  position: absolute;
+  top: 150%;
+  left: -200px;
+  width: 120%;
+  transform: rotate(50deg);
+  background-color: white;
+  height: 18px;
+  filter: blur(30px);
+  opacity: 0.5;
+  transition: 1s;
+}
+
+.card-content .card:hover::after {
+  width: 225%;
+  top: -100%;
+}
+
+.card-content .card:hover {
+  filter: brightness(110%);
+}
+
+.card-content .card h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.card-content .card p {
+  text-align: center;
+  width: 100%;
+  margin: 12px 0;
+  color: rgb(170, 16, 16); /* Змінено колір тексту "Переглянути карту" */
+}
+
+.card-content .card:hover i {
+  color: rgb(178, 14, 14);
+}
+
+.card {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.highlight {
+  border: 2px solid rgb(212, 17, 46);
+  padding: 5px;
+  margin: 0;
+  display: inline-block;
+}
+
   </style>
 </head>
 
@@ -45,16 +113,14 @@
     <div class="service-content">
       <div class="service">
         <h1>Kovel Parts</h1>
-        <div class="card-content" >
-          <div class="card"  onclick="initiateCall('0661006044')">
-            <img src="Png/adBlue.png" alt="Заправка AdBlue">
-            <h2>Заправка AdBlue</h2>
-            <p class="highlight" onclick="openLink('https://maps.app.goo.gl/7kbhbSCBgVwnjviV7')">Переглянути на карті</p>
+        <div class="card-content">
+          <div class="card first-card" onclick="initiateCall('0661006044')">
+            <h2></h2>
+            <p class="highlight" onclick="openLink('https://maps.app.goo.gl/7kbhbSCBgVwnjviV7')">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПереглянути карту</p>
           </div>
-          <div class="card"  onclick="initiateCall('0501006044')">
-            <img src="Png/Magazine.png" alt="Склад-магазин">
-            <h2>Склад-магазин</h2>
-            <p class="highlight"onclick="openLink('https://maps.app.goo.gl/EYbwhGbyh5FJg3HD6')">Переглянути на карті</p>
+          <div class="card second-card" onclick="initiateCall('0501006044')">
+            <h2></h2>
+            <p class="highlight" onclick="openLink('https://maps.app.goo.gl/EYbwhGbyh5FJg3HD6')">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПереглянути карту</p>
           </div>
           <div class="card">
             <img src="Png/logo.png" alt="Про нас">
@@ -64,12 +130,12 @@
           <div class="card" onclick="openLink('https://www.instagram.com/kovel_parts/')">
             <img src="Png/instagram.png" alt="Instagram">
             <h2>Instagram</h2>
-            <p >Kovel_parts</p>
+            <p>Kovel_parts</p>
           </div>
           <div class="card" onclick="openLink('https://www.facebook.com/profile.php?id=61554173969323')">
             <img src="Png/facebook.png" alt="Facebook">
             <h2>Facebook</h2>
-            <p >Заправка Adblue Ковель</p>
+            <p>Заправка Adblue Ковель</p>
           </div>
         </div>
       </div>
